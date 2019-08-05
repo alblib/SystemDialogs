@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		62671F4B22F6164D006D4329 /* USAlertDefaultActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62671F4A22F6164D006D4329 /* USAlertDefaultActions.swift */; };
 		626D259622DB125800843A30 /* SystemDialogs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 626D258C22DB125800843A30 /* SystemDialogs.framework */; };
 		626D259B22DB125800843A30 /* SystemDialogsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D259A22DB125800843A30 /* SystemDialogsTests.swift */; };
 		626D259D22DB125800843A30 /* SystemDialogs.h in Headers */ = {isa = PBXBuildFile; fileRef = 626D258F22DB125800843A30 /* SystemDialogs.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -24,6 +25,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		62671F4A22F6164D006D4329 /* USAlertDefaultActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USAlertDefaultActions.swift; sourceTree = "<group>"; };
 		626D258C22DB125800843A30 /* SystemDialogs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SystemDialogs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		626D258F22DB125800843A30 /* SystemDialogs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SystemDialogs.h; sourceTree = "<group>"; };
 		626D259022DB125800843A30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				626D258F22DB125800843A30 /* SystemDialogs.h */,
 				626D259022DB125800843A30 /* Info.plist */,
 				62AFF17C22DB16B100167601 /* USAlert.swift */,
+				62671F4A22F6164D006D4329 /* USAlertDefaultActions.swift */,
 			);
 			path = SystemDialogs;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 626D258222DB125800843A30;
 			productRefGroup = 626D258D22DB125800843A30 /* Products */;
@@ -198,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62671F4B22F6164D006D4329 /* USAlertDefaultActions.swift in Sources */,
 				62AFF17D22DB16B100167601 /* USAlert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -274,6 +274,7 @@ class USAlertAction: USAlertActionProtocol{
     static var deleteString: String{
         switch Locale.current.languageCode{
         case "zh", "wuu", "yue": return "删除"
+        case "fr": return "Effacer"
         default: return "Delete"
         }
     }
@@ -281,14 +282,39 @@ class USAlertAction: USAlertActionProtocol{
         let numStr: String = NumberFormatter().string(from: NSNumber(value: items)) ?? String(format:"%d",items)
         
         switch Locale.current.languageCode{
-        case "ko": return numStr+"개 삭제"
-        case "ja": return numStr+"個削除"
+        case "ko": return numStr+"개를 삭제"
+        case "ja": return numStr+"個を削除"
         case "zh", "wuu", "yue": return "删除"+numStr+"项"
         default: return "Delete " + numStr + " items"
         }
     }
+    static var removeString: String{
+        switch Locale.current.languageCode{
+        default: return "Remove"
+        }
+    }
+    static var eraseString: String{
+        switch Locale.current.languageCode{
+        default: return "Erase"
+        }
+    }
     
+    static var activateString: String{
+        switch Locale.current.languageCode{
+        case "fr": return "Activer"
+        default: return "Activate"
+        }
+    }
     
+    static var deactivateString: String{
+        switch Locale.current.languageCode{
+        case "fr": return "Désactiver"
+        default: return "Deactivate"
+        }
+    }
+
+    
+    //let settingLocationString = "Settings"
     static let cancel = USAlertAction(title: cancelString, style: .cancel)
     static let ok = USAlertAction(title: okString, style: .default)
     static let dismiss = USAlertAction(title: dismissString, style: .cancel)
@@ -299,7 +325,16 @@ class USAlertAction: USAlertActionProtocol{
     static let trust = USAlertAction(title: trustString, style: .default)
     static let dontTrust = USAlertAction(title: dontTrustString, style: .cancel)
     static let update = USAlertAction(title: updateString, style: .default)
-
+    static let settingLocation = USAlertAction(title: "Settings", style: .default, handler: {
+        #if os(macOS)
+        if let prefpaneUrl = URL(string: "x-apple.systempreferences:com.apple.preference.security?Privacy_LocationServices")
+        {NSWorkspace.shared.open(prefpaneUrl)}
+        #elseif os(watchOS)
+        
+        #else
+        #endif
+        
+    })
     
 }
 
